@@ -1,13 +1,19 @@
 const { SlashCommandBuilder } = require('discord.js');
-const _ = require('lodash');
+const sample = require('lodash/sample');
 const notationsArray = ['U', 'D', 'R', 'L', 'F', 'B'];
 const notationModifiers = ["", "2", "'"];
 
 const generateScramble = (length) => {
     const scramble = [];
     for (let i = 0; i < length; i++) {
-        const notation = _.sample(notationsArray);
-        const modifier = _.sample(notationModifiers);
+        let notation;
+
+        do {
+            notation = sample(notationsArray);
+        } while (i > 0 && notation === scramble[i - 1].charAt(0));
+
+        const modifier = sample(notationModifiers);
+        
         scramble.push(notation + modifier);
     }
     return scramble.join(' ');
