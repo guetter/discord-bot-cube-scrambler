@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^9.1.1"
+  }
+}
