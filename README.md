@@ -15,3 +15,8 @@ This project is a simple Discord bot that generates random Rubik's Cube scrambli
     - `short`: Generates a short scramble.
     - `average`: Generates an average-length scramble.
     - `long`: Generates a long scramble.
+ 
+A short scramble will return something like this:
+
+
+![image](https://github.com/guetter/discord-bot-cube-scrambler/assets/141455361/57bd1c14-e7a2-47ad-a1fe-f0017f4d43a2)
