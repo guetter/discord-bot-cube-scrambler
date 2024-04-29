@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, hyperlink, EmbedBuilder} = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder} = require('discord.js');
 const sample = require('lodash/sample');
 const notationsArray = ['U', 'D', 'R', 'L', 'F', 'B'];
 const notationModifiers = ["", "2", "'"];
@@ -34,13 +34,11 @@ module.exports = {
                 )),
 	async execute(interaction) {
         const scramble = generateScramble(interaction.options.getInteger('length'));
-        const helpLink = hyperlink('[Click Here]', 'https://jperm.net/3x3/moves');
 
         const embed = new EmbedBuilder()
         .setTitle('Rubik\'s Cube Scramble')
         .setDescription(`Here is your scramble:\n\`\`\`${scramble}\`\`\``)
-        .addFields([{ name: 'Learn More', value: `${helpLink}` }])
-        .setColor('#00FF00');
+        .setFooter({ text: 'To learn more, type /help'});
     
     await interaction.reply({ embeds: [embed] })
 	},
