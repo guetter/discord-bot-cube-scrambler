@@ -1,6 +1,6 @@
 # Rubik's Cube Scramble Bot
 
-This project is a simple Discord bot that generates random Rubik's Cube scrambling notations to provide users with a new puzzle to solve. It is written in JavaScript and uses the Discord.js library to interact with the Discord API.
+This project is a simple Discord bot that generates random Rubik's Cube scrambling notations to provide users with a new puzzle to solve. It is built with Node.js and uses the Discord.js library to interact with the Discord API.
 
 ## Technologies Used
 
